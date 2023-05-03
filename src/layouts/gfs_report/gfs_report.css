@@ -1,0 +1,121 @@
+h1,
+h2,
+h3 {
+  margin: 0px;
+  padding: 0px;
+}
+.main {
+  background: linear-gradient(110deg, #ffc608 33%, rgba(0, 0, 0, 0) 33%),
+    linear-gradient(110deg, darkblue 100%, #ffc608 66%);
+  padding: 10px;
+  height: 297mm;
+  width: 210mm;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.content {
+  background-color: white;
+  padding: 10px;
+  height: 290mm;
+  width: 204mm;
+}
+
+header {
+  display: flex;
+  gap: 330px;
+}
+
+.title_group {
+  width: 600px;
+}
+
+.logo_group {
+  display: flex;
+  align-items: flex-end;
+}
+
+hr.rounded {
+  border-top: 3px solid blueviolet;
+  border-radius: 5px;
+}
+
+div.cover_pic {
+  height: 100%;
+  object-fit: contain;
+}
+
+div.cover_pic img {
+  object-fit: contain;
+  width: 100%;
+}
+
+section.score_section {
+  display: flex;
+  gap: 40px;
+}
+
+div.profile_pic {
+  width: 200px;
+  height: 300px;
+}
+
+div.profile_pic img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+div.donut_chart {
+  width: 80px;
+  height: 80px;
+  align-self: flex-end;
+}
+
+div.session_text {
+  width: 100px;
+  text-align: justify;
+  margin-left: 40px;
+  padding-top: 10px;
+}
+
+div.session_stats {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+p.session_number {
+  display: inline-block;
+  transform: scale(2, 2);
+  transform-origin: 0% 35%;
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+div.stats div:nth-child(2) {
+  font-size: large;
+  font-weight: bold;
+}
+
+div.radar_chart {
+  width: 50%;
+  height: 280px;
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+}
+
+div.radar_chart canvas {
+  float: right;
+}
+
+div.bar_stats {
+  width: 250px;
+}
+
+section.comment_section {
+  height: 150px;
+}
