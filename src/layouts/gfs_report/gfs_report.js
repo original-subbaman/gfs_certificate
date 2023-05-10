@@ -8,11 +8,6 @@ import GFSLogo from "../gfs_report/assets/GFS_logo.png";
 import TNALogo from "../gfs_report/assets/TNA_logo.png";
 import KhelumLogo from "../gfs_report/assets/Khelum_logo.png";
 function GFSReport(props) {
-  const options = {
-    legend: {
-      display: false,
-    },
-  };
   return (
     <div className="main">
       <div className="content">
@@ -24,10 +19,11 @@ function GFSReport(props) {
           <div className="logo_group">
             <img src={TNALogo} alt="logo one" />
             <img src={GFSLogo} alt="logo two" />
+            <img id="khelum_logo" src={KhelumLogo} alt="Khelum logo" />
           </div>
         </header>
         <hr className="rounded" />
-        <section>
+        <section id="cover_photo">
           <div className="cover_pic">
             <img id="class_photo" src={Cover} alt="cover" />
           </div>
@@ -65,9 +61,10 @@ function GFSReport(props) {
           <p>{props.teacherComment}</p>
         </section>
         <hr className="rounded" />
-        <div className="khelum">
-          <img id="khelum_logo" src={KhelumLogo} alt="Khelum logo" />
-        </div>
+        <section className="signature_section">
+          <p>TNA Director</p>
+          <p>Khelum Director</p>
+        </section>
       </div>
     </div>
   );

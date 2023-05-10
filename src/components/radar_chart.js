@@ -9,8 +9,70 @@ import {
 } from "chart.js";
 Chart.register(RadialLinearScale, PointElement, LineElement, Legend, Tooltip);
 
-function RadarChart({ data }) {
-  return <Radar data={data} />;
+function RadarChart(dataPoints) {
+  const dataOptionsPrimary = {
+    backgroundColor: "rgba(255, 99, 132, 0.2)",
+    borderColor: "rgb(255, 99, 132)",
+    pointBackgroundColor: "rgb(255, 99, 132)",
+    pointBorderColor: "#fff",
+    pointHoverBackgroundColor: "#fff",
+    pointHoverBorderColor: "rgb(255, 99, 132)",
+    borderJointStyle: "round",
+  };
+  const dataOptionsSecondary = {
+    backgroundColor: "rgba(54, 162, 235, 0.2)",
+    borderColor: "rgb(54, 162, 235)",
+    pointBackgroundColor: "rgb(54, 162, 235)",
+    pointBorderColor: "#fff",
+    pointHoverBackgroundColor: "#fff",
+    pointHoverBorderColor: "rgb(54, 162, 235)",
+    borderJointStyle: "round",
+  };
+
+  const data = {
+    labels: ["Technical", "Psychological", "Social", "Physical"],
+    datasets: [
+      {
+        label: "Participant's Score",
+        data: dataPoints.data[0],
+        fill: true,
+        ...dataOptionsPrimary,
+      },
+      {
+        label: "Group Average Score",
+        data: dataPoints.data[1],
+        fill: true,
+        ...dataOptionsSecondary,
+      },
+    ],
+  };
+  const options = {
+    plugins: {
+      legend: {
+        labels: {
+          font: {
+            family: "Glacial Indifference",
+          },
+        },
+      },
+    },
+    scale: {
+      pointLabels: {
+        font: {
+          family: "Glacial Indifference",
+        },
+      },
+      r: {
+        angleLines: { display: false },
+        grid: {
+          circular: true,
+        },
+        suggestedMin: 50,
+        suggestedMax: 100,
+      },
+    },
+  };
+  return <Radar data={data} options={options} />;
 }
 
 export default RadarChart;

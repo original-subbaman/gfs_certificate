@@ -4,6 +4,11 @@ h3 {
   margin: 0px;
   padding: 0px;
 }
+
+@font-face {
+  font-family: "Glacial Indifference";
+  src: url("/src/fonts/glacial-indifference/GlacialIndifference-Regular.otf");
+}
 .main {
   font-family: "Arvo", serif;
   color: #023852;
@@ -19,12 +24,26 @@ h3 {
   margin: 0 auto;
 }
 
-.content {
-  background-image: url("assets/background.png");
+div.content {
   background-size: cover;
-  padding: 10px;
+  padding: 10px 25px 10px 25px;
+  position: relative;
   height: 290mm;
-  width: 204mm;
+  width: 195mm;
+  z-index: 1;
+}
+
+div.content::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url("assets/background.png");
+  opacity: 0.4;
 }
 
 header {
@@ -35,35 +54,42 @@ header {
 .title_group {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 600px;
 }
 
 div.logo_group {
   display: flex;
-  width: 200px;
+  width: 300px;
+  height: 100px;
+}
+
+#khelum_logo {
+  width: 100px;
+  float: right;
   height: 100px;
 }
 
 hr.rounded {
-  border-top: 4px solid #023852;
-  border-radius: 5px;
+  border-top: 4px solid #19a7ce;
+  margin-bottom: 20px;
 }
 
-div.cover_pic {
-  height: 100%;
-  object-fit: contain;
+#cover_photo {
+  margin-bottom: 20px;
 }
 
 div.cover_pic img {
   object-fit: contain;
   width: 100%;
-  height: 350px;
+  height: 250px;
 }
 
 section.score_section {
   display: flex;
-  gap: 40px;
+  gap: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 div.profile_pic {
@@ -78,9 +104,9 @@ div.profile_pic img {
 }
 
 div.donut_chart {
-  width: 80px;
-  height: 80px;
-  align-self: flex-end;
+  width: 70px;
+  height: 70px;
+  align-self: center;
 }
 
 div.session_text {
@@ -92,7 +118,7 @@ div.session_text {
 
 div.session_stats {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-right: 20px;
 }
 
@@ -110,11 +136,14 @@ div.stats div:nth-child(2) {
 }
 
 div.radar_chart {
-  width: 280px;
-  height: 280px;
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  border-radius: 100px;
   position: absolute;
   right: 0;
-  margin-right: 10px;
+  margin-right: 18px;
+  margin-top: 18px;
 }
 
 div.radar_chart canvas {
@@ -122,15 +151,19 @@ div.radar_chart canvas {
 }
 
 div.bar_stats {
-  width: 250px;
+  width: 200px;
 }
 
 section.comment_section {
-  height: 150px;
+  height: 155px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
-#khelum_logo {
-  width: 100px;
-  float: right;
-  height: 100px;
+section.signature_section {
+  display: flex;
+  gap: 80px;
+  align-items: flex-end;
+  height: 140px;
+  justify-content: flex-end;
 }

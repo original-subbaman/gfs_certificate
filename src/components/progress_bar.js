@@ -7,6 +7,8 @@ const CustomProgressBar = (props) => {
         completed={props.completed}
         maxCompleted={props.maxCompleted}
         customLabel={props.label}
+        bgColor="#146C94"
+        baseBgColor="#B0DAFF"
       />
     </div>
   );
