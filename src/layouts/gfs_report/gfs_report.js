@@ -1,15 +1,15 @@
 import "./gfs_report.css";
 import DonutChart from "../../components/donut_chart";
 import RadarChart from "../../components/radar_chart";
-import Player from "../../assets/messi.png";
-import Cover from "../../assets/cover.jpg";
+import Player from "./assets/3.png";
 import CustomProgressBar from "../../components/progress_bar";
 import GFSLogo from "../gfs_report/assets/GFS_logo.png";
 import TNALogo from "../gfs_report/assets/TNA_logo.png";
 import KhelumLogo from "../gfs_report/assets/Khelum_logo.png";
+import Signature from "../../components/signature/signature";
 function GFSReport(props) {
   return (
-    <div className="main">
+    <div id="report" className="main">
       <div className="content">
         <header>
           <div className="title_group">
@@ -17,15 +17,19 @@ function GFSReport(props) {
             <h1>{props.heading}</h1>
           </div>
           <div className="logo_group">
-            <img src={TNALogo} alt="logo one" />
-            <img src={GFSLogo} alt="logo two" />
-            <img id="khelum_logo" src={KhelumLogo} alt="Khelum logo" />
+            <img id="logo" src={TNALogo} alt="logo one" />
+            <img id="logo" src={GFSLogo} alt="logo two" />
+            <img id="logo" src={KhelumLogo} alt="Khelum logo" />
           </div>
         </header>
         <hr className="rounded" />
         <section id="cover_photo">
           <div className="cover_pic">
-            <img id="class_photo" src={Cover} alt="cover" />
+            <img
+              id="class_photo"
+              src={`https://drive.google.com/uc?export=view&id=${props.coverPhoto}`}
+              alt="cover"
+            />
           </div>
         </section>
         <hr className="rounded" />
@@ -33,10 +37,14 @@ function GFSReport(props) {
           <div className="profile">
             <h1>{props.studentName}</h1>
             <div className="profile_pic">
-              <img src={Player} width="auto" alt="student" />
+              <img
+                src={`https://drive.google.com/uc?export=view&id=${props.studentPhoto}`}
+                width="auto"
+                alt="student"
+              />
             </div>
           </div>
-          <div>
+          <div className="session_score">
             <div className="session_stats">
               <div className="donut_chart">
                 <DonutChart data={props.donutChartData} />
@@ -62,8 +70,14 @@ function GFSReport(props) {
         </section>
         <hr className="rounded" />
         <section className="signature_section">
-          <p>TNA Director</p>
-          <p>Khelum Director</p>
+          <Signature
+            title={props.signatureOneTitle}
+            org={props.signatureOneOrg}
+          />
+          <Signature
+            title={props.signatureTwoTitle}
+            org={props.signatureTwoOrg}
+          />
         </section>
       </div>
     </div>

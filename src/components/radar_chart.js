@@ -12,7 +12,7 @@ Chart.register(RadialLinearScale, PointElement, LineElement, Legend, Tooltip);
 function RadarChart(dataPoints) {
   const dataOptionsPrimary = {
     backgroundColor: "rgba(255, 99, 132, 0.2)",
-    borderColor: "rgb(255, 99, 132)",
+    borderColor: "rgb(255, 99, 255)",
     pointBackgroundColor: "rgb(255, 99, 132)",
     pointBorderColor: "#fff",
     pointHoverBackgroundColor: "#fff",
@@ -50,28 +50,32 @@ function RadarChart(dataPoints) {
     plugins: {
       legend: {
         labels: {
+          usePointStyle: true,
           font: {
             family: "Glacial Indifference",
           },
         },
       },
     },
-    scale: {
-      pointLabels: {
-        font: {
-          family: "Glacial Indifference",
-        },
-      },
+    scales: {
       r: {
-        angleLines: { display: false },
+        pointLabels: {
+          font: {
+            family: "Glacial Indifference",
+            size: 12,
+          },
+        },
+        angleLines: { display: true },
         grid: {
           circular: true,
+          color: ["orange"],
         },
-        suggestedMin: 50,
-        suggestedMax: 100,
+        suggestedMin: 0,
+        suggestedMax: 4,
       },
     },
   };
+  console.log(dataPoints[0]);
   return <Radar data={data} options={options} />;
 }
 

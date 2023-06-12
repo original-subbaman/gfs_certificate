@@ -5,6 +5,11 @@ h3 {
   padding: 0px;
 }
 
+section {
+  padding: 0;
+  margin: 0;
+}
+
 @font-face {
   font-family: "Glacial Indifference";
   src: url("/src/fonts/glacial-indifference/GlacialIndifference-Regular.otf");
@@ -18,9 +23,6 @@ h3 {
   padding: 10px;
   height: 297mm;
   width: 210mm;
-  position: absolute;
-  left: 0;
-  right: 0;
   margin: 0 auto;
 }
 
@@ -62,12 +64,23 @@ div.logo_group {
   display: flex;
   width: 300px;
   height: 100px;
+  align-content: flex-end;
 }
 
-#khelum_logo {
-  width: 100px;
+#logo:nth-child(2) {
+  width: 25mm;
   float: right;
-  height: 100px;
+  height: 25mm;
+}
+
+#logo:nth-child(3) {
+  width: 30mm;
+  height: 30mm;
+}
+
+#logo:first-of-type {
+  width: 30mm;
+  height: 30mm;
 }
 
 hr.rounded {
@@ -76,13 +89,26 @@ hr.rounded {
 }
 
 #cover_photo {
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-div.cover_pic img {
-  object-fit: contain;
+div.cover_pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 250px;
+  position: relative;
+  overflow: hidden;
+  background-color: aliceblue;
+  margin-bottom: 20px;
+}
+div.cover_pic img {
+  object-fit: contain;
+  width: 600px;
+  height: auto;
+  position: absolute;
 }
 
 section.score_section {
@@ -92,20 +118,34 @@ section.score_section {
   padding-right: 8px;
 }
 
+div.session_score {
+  translate: -150px 40px;
+}
+
+div.profile {
+  width: 350px;
+  position: relative;
+}
+
 div.profile_pic {
   width: 200px;
   height: 300px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 div.profile_pic img {
   object-fit: contain;
   height: 100%;
-  width: 100%;
+  width: 500px;
 }
 
 div.donut_chart {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   align-self: center;
 }
 
@@ -114,6 +154,10 @@ div.session_text {
   text-align: justify;
   margin-left: 40px;
   padding-top: 10px;
+}
+
+div.session_text p {
+  font-size: 1rem;
 }
 
 div.session_stats {
@@ -127,7 +171,8 @@ p.session_number {
   transform: scale(2, 2);
   transform-origin: 0% 35%;
   font-weight: bolder;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  align-self: center;
 }
 
 div.stats div:nth-child(2) {
@@ -151,11 +196,11 @@ div.radar_chart canvas {
 }
 
 div.bar_stats {
-  width: 200px;
+  width: 130px;
 }
 
 section.comment_section {
-  height: 155px;
+  height: 150px;
   padding-left: 8px;
   padding-right: 8px;
 }
@@ -166,4 +211,6 @@ section.signature_section {
   align-items: flex-end;
   height: 140px;
   justify-content: flex-end;
+  position: relative;
+  bottom: 10px;
 }
