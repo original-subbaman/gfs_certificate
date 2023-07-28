@@ -1,8 +1,0 @@
-div.upload_photo {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  border: 5px solid blueviolet;
-  padding: 10px;
-  margin-right: 10px;
-}
