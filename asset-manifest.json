@@ -1,21 +1,23 @@
 {
   "files": {
-    "main.css": "/gfs_certificate/static/css/main.0b1b52ae.css",
-    "main.js": "/gfs_certificate/static/js/main.b3bf3aa1.js",
+    "main.css": "/gfs_certificate/static/css/main.c0322742.css",
+    "main.js": "/gfs_certificate/static/js/main.f6c08bde.js",
     "static/js/787.fe20837e.chunk.js": "/gfs_certificate/static/js/787.fe20837e.chunk.js",
     "static/media/background.png": "/gfs_certificate/static/media/background.5f99271407f810d7e3fe.png",
     "static/media/TNA_logo.png": "/gfs_certificate/static/media/TNA_logo.1a5842bbbe3df0b4f260.png",
     "static/media/GFS_logo.png": "/gfs_certificate/static/media/GFS_logo.33d553313bbf455f96e8.png",
     "static/media/Khelum_logo.png": "/gfs_certificate/static/media/Khelum_logo.c3a0cf1a5acb2a93a93f.png",
     "static/media/Frame.png": "/gfs_certificate/static/media/Frame.d425999863cd6f8a8d94.png",
+    "static/media/sigtwo.jpeg": "/gfs_certificate/static/media/sigtwo.0e0c670493c9effb5c52.jpeg",
     "static/media/GlacialIndifference-Regular.otf": "/gfs_certificate/static/media/GlacialIndifference-Regular.663a1c12d079e631b0b2.otf",
+    "static/media/sigone.jpeg": "/gfs_certificate/static/media/sigone.e1144579dccaba9c1b3b.jpeg",
     "index.html": "/gfs_certificate/index.html",
-    "main.0b1b52ae.css.map": "/gfs_certificate/static/css/main.0b1b52ae.css.map",
-    "main.b3bf3aa1.js.map": "/gfs_certificate/static/js/main.b3bf3aa1.js.map",
+    "main.c0322742.css.map": "/gfs_certificate/static/css/main.c0322742.css.map",
+    "main.f6c08bde.js.map": "/gfs_certificate/static/js/main.f6c08bde.js.map",
     "787.fe20837e.chunk.js.map": "/gfs_certificate/static/js/787.fe20837e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b1b52ae.css",
-    "static/js/main.b3bf3aa1.js"
+    "static/css/main.c0322742.css",
+    "static/js/main.f6c08bde.js"
   ]
 }
