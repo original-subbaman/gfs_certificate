@@ -4,6 +4,8 @@ import CSVUpload from "./components/csv_upload/csv_upload";
 import AddTitle from "./components/add_title/AddTitle";
 import html2canvas from "html2canvas";
 import { useState } from "react";
+import sigOne from "./assets/sigone.jpeg"; 
+import sigTwo from "./assets/sigtwo.jpeg";
 
 function App() {
   const [csvData, setCsvData] = useState([]);
@@ -36,7 +38,7 @@ function App() {
       const lines = csv.split(/\n|\r\n/);
       const headers = lines[0].split(",");
       for (let i = 1; i < lines.length; i++) {
-        const currentLine = lines[i].split(",");
+        const currentLine = lines[i].split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
         const obj = {};
         for (let j = 0; j < headers.length; j++) {
           if (
@@ -50,13 +52,12 @@ function App() {
             obj[headers[j]] = currentLine[j];
           }
         }
-        if (obj.Name === "AVERAGE") {
+        if (obj.Name.toLowerCase() === "average") {
           avgData.push(obj);
         } else {
           data.push(obj);
         }
-      }
-    };
+      }};
     reader.readAsText(file);
     setCsvData(data);
     setRadarAvg(avgData);
@@ -101,7 +102,6 @@ function App() {
     console.log(value);
     if(getIdFromLink(value.CoverPhoto) !== groupPhoto){
       setGroupPhoto(getIdFromLink(value.CoverPhoto));
-      console.log("Cover Photo: " + value.CoverPhoto + " " + "Group Photo: " + groupPhoto);
     }
     setName(convertMiddleNameToInitial(value.Name));
     setStudentGroup(value.Group);
@@ -157,6 +157,7 @@ function App() {
         <AddTitle header={"Add Title"} value={subheader} setValue={setSubHeader} />
         <AddTitle header={"Add Sub Title"} value={extraSessionTitleOne} setValue={setExtraSessionTitleOne} />
         <AddTitle header={"Add Sub Title"} value={extraSessionTitleTwo} setValue={setExtraSessionTitleTwo} />
+     
         <div className="button_group">
           <button onClick={handleOnNextClick}>Next</button>
           <button onClick={generatePDF}>Generate PDF</button>
@@ -179,6 +180,8 @@ function App() {
         extraSessionTitleTwo={extraSessionTitleTwo}
         extraSessionDataTwo={extraSessionDataTwo}
         radarData={radarData}
+        signaturePicOne={sigOne}
+        signaturePicTwo={sigTwo}
         signatureOneTitle={"Director"}
         signatureOneOrg={"Tashi Namgyal Academy"}
         signatureTwoTitle={"Director"}

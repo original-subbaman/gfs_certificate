@@ -210,7 +210,7 @@ section.comment_section {
 section.signature_section {
   display: flex;
   align-items: flex-end;
-  height: 150px;
+  height: 200px;
   justify-content: space-between;
   position: relative;
 

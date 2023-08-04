@@ -67,11 +67,13 @@ function GFSReport(props) {
         <hr className="rounded" />
         <section className="signature_section">
           <Signature
+            signature={props.signaturePicTwo}
             title={props.signatureOneTitle}
             org={props.signatureOneOrg}
           />
-          <img id="logo" src={KhelumLogo} alt="Khelum logo" />
+          <img id="logo" src={KhelumLogo} alt="Khelum logo" style={{width: "180px", height: "180px"}}/>
           <Signature
+            signature={props.signaturePicOne}
             title={props.signatureTwoTitle}
             org={props.signatureTwoOrg}
           />
