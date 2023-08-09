@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/gfs_certificate/static/css/main.c0322742.css",
-    "main.js": "/gfs_certificate/static/js/main.755931bb.js",
+    "main.js": "/gfs_certificate/static/js/main.55a2750e.js",
     "static/js/787.fe20837e.chunk.js": "/gfs_certificate/static/js/787.fe20837e.chunk.js",
     "static/media/background.png": "/gfs_certificate/static/media/background.5f99271407f810d7e3fe.png",
     "static/media/TNA_logo.png": "/gfs_certificate/static/media/TNA_logo.1a5842bbbe3df0b4f260.png",
@@ -13,11 +13,11 @@
     "static/media/sigone.jpeg": "/gfs_certificate/static/media/sigone.e1144579dccaba9c1b3b.jpeg",
     "index.html": "/gfs_certificate/index.html",
     "main.c0322742.css.map": "/gfs_certificate/static/css/main.c0322742.css.map",
-    "main.755931bb.js.map": "/gfs_certificate/static/js/main.755931bb.js.map",
+    "main.55a2750e.js.map": "/gfs_certificate/static/js/main.55a2750e.js.map",
     "787.fe20837e.chunk.js.map": "/gfs_certificate/static/js/787.fe20837e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c0322742.css",
-    "static/js/main.755931bb.js"
+    "static/js/main.55a2750e.js"
   ]
 }
